@@ -12,6 +12,7 @@
 		A6993440195C6F6700EB265F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A699343E195C6F6700EB265F /* Main.storyboard */; };
 		A6993442195C6F6700EB265F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6993441195C6F6700EB265F /* Images.xcassets */; };
 		A699344E195C6F6700EB265F /* BouncyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699344D195C6F6700EB265F /* BouncyViewTests.swift */; };
+		A6993458195C6F7600EB265F /* BouncyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6993457195C6F7600EB265F /* BouncyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		A6993447195C6F6700EB265F /* BouncyViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BouncyViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A699344C195C6F6700EB265F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A699344D195C6F6700EB265F /* BouncyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncyViewTests.swift; sourceTree = "<group>"; };
+		A6993457195C6F7600EB265F /* BouncyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				A699343A195C6F6700EB265F /* AppDelegate.swift */,
-				A699343C195C6F6700EB265F /* ViewController.swift */,
-				A699343E195C6F6700EB265F /* Main.storyboard */,
+				A6993457195C6F7600EB265F /* BouncyView.swift */,
 				A6993441195C6F6700EB265F /* Images.xcassets */,
+				A699343E195C6F6700EB265F /* Main.storyboard */,
 				A6993438195C6F6700EB265F /* Supporting Files */,
+				A699343C195C6F6700EB265F /* ViewController.swift */,
 			);
 			path = BouncyView;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6993458195C6F7600EB265F /* BouncyView.swift in Sources */,
 				A699343D195C6F6700EB265F /* ViewController.swift in Sources */,
 				A699343B195C6F6700EB265F /* AppDelegate.swift in Sources */,
 			);

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BouncyView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,62 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brf-SD-e5L">
+                                <rect key="frame" x="217" y="225" width="46" height="30"/>
+                                <state key="normal" title="Toggle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleVisibility:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Nc-8f-Gvf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-17-HkY" userLabel="Bouncy View" customClass="BouncyView" customModule="BouncyView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="380" width="480" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="M0S-h7-JZd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THn-zU-Tkr" userLabel="Side Helper View">
+                                <rect key="frame" x="0.0" y="330" width="10" height="10"/>
+                                <color key="backgroundColor" red="0.070872083093608609" green="0.82625214041095885" blue="0.23844114268513575" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="3Cx-b7-TT3"/>
+                                    <constraint firstAttribute="height" constant="10" id="DKf-gh-38o"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNx-4Y-UsS" userLabel="Center Helper View">
+                                <rect key="frame" x="235" y="330" width="10" height="10"/>
+                                <color key="backgroundColor" red="0.82625214041095885" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="J8Y-L8-GTB"/>
+                                    <constraint firstAttribute="width" constant="10" id="Kkf-DV-s5l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="brf-SD-e5L" secondAttribute="centerX" id="2AM-QE-7Ds"/>
+                            <constraint firstItem="THn-zU-Tkr" firstAttribute="top" secondItem="2fi-mo-0CV" secondAttribute="bottom" constant="-150" id="4JA-Br-Brm"/>
+                            <constraint firstAttribute="centerX" secondItem="yNx-4Y-UsS" secondAttribute="centerX" id="H21-sk-ptr"/>
+                            <constraint firstAttribute="centerY" secondItem="brf-SD-e5L" secondAttribute="centerY" id="PG1-CU-xcP"/>
+                            <constraint firstItem="THn-zU-Tkr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="e6B-ha-t4c"/>
+                            <constraint firstItem="rl2-17-HkY" firstAttribute="top" secondItem="2fi-mo-0CV" secondAttribute="top" constant="-100" id="hrH-5V-8yt"/>
+                            <constraint firstItem="yNx-4Y-UsS" firstAttribute="top" secondItem="2fi-mo-0CV" secondAttribute="bottom" constant="-150" id="loE-Ob-rmt"/>
+                            <constraint firstAttribute="trailing" secondItem="rl2-17-HkY" secondAttribute="trailing" id="sNY-fS-kxf"/>
+                            <constraint firstItem="rl2-17-HkY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="y8N-kY-ARU"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <connections>
+                        <outlet property="bouncyView" destination="rl2-17-HkY" id="cfB-MC-XeD"/>
+                        <outlet property="bouncyViewTopConstraint" destination="hrH-5V-8yt" id="7hg-Oi-qtr"/>
+                        <outlet property="centerHelperTopConstraint" destination="loE-Ob-rmt" id="ywM-te-9Yt"/>
+                        <outlet property="centerHelperView" destination="yNx-4Y-UsS" id="Cct-BB-fz0"/>
+                        <outlet property="sideHelperTopConstraint" destination="4JA-Br-Brm" id="Ta2-qb-Mgu"/>
+                        <outlet property="sideHelperView" destination="THn-zU-Tkr" id="WiR-rI-fQN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
