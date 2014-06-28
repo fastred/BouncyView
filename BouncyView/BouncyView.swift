@@ -12,7 +12,7 @@ import CoreGraphics
 class BouncyView: UIView {
 
     var sideToCenterDelta: CGFloat = 0.0
-    let fillColor = UIColor(red: 0, green: 0.722, blue: 1, alpha: 1) // blue color
+    var fillColor = UIColor(red: 0, green: 0.722, blue: 1, alpha: 1) // blue color
 
     override func drawRect(rect: CGRect) {
         let yOffset: CGFloat = 20.0
