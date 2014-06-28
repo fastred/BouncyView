@@ -37,10 +37,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func toggleVisibility(sender: UIButton) {
-        let actionSheetHeight: Float = CGRectGetHeight(bouncyView.frame)
-        let hiddenTopMargin: Float = 0
-        let showedTopMargin: Float = -actionSheetHeight
-        let newTopMargin: Float = abs(centerHelperTopConstraint.constant - hiddenTopMargin) < 1 ? showedTopMargin : hiddenTopMargin
+        let actionSheetHeight: CGFloat = CGRectGetHeight(bouncyView.frame)
+        let hiddenTopMargin: CGFloat = 0
+        let showedTopMargin: CGFloat = -actionSheetHeight
+        let newTopMargin: CGFloat = abs(centerHelperTopConstraint.constant - hiddenTopMargin) < 1 ? showedTopMargin : hiddenTopMargin
         let options: UIViewAnimationOptions = .BeginFromCurrentState | .AllowUserInteraction
 
         sideHelperTopConstraint.constant = newTopMargin
