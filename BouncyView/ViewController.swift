@@ -11,13 +11,13 @@ import QuartzCore
 
 class ViewController: UIViewController {
 
-    @IBOutlet var sideHelperView: UIView
-    @IBOutlet var centerHelperView: UIView
-    @IBOutlet var bouncyView: BouncyView
+    @IBOutlet var sideHelperView: UIView!
+    @IBOutlet var centerHelperView: UIView!
+    @IBOutlet var bouncyView: BouncyView!
 
-    @IBOutlet var sideHelperTopConstraint: NSLayoutConstraint
-    @IBOutlet var centerHelperTopConstraint: NSLayoutConstraint
-    @IBOutlet var bouncyViewTopConstraint: NSLayoutConstraint
+    @IBOutlet var sideHelperTopConstraint: NSLayoutConstraint!
+    @IBOutlet var centerHelperTopConstraint: NSLayoutConstraint!
+    @IBOutlet var bouncyViewTopConstraint: NSLayoutConstraint!
 
     var displayLink: CADisplayLink?
     var animationCount = 0
