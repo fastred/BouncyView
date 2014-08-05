@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
 
     func animationWillStart() {
-        if !displayLink {
+        if displayLink == nil {
             displayLink = CADisplayLink(target: self, selector: "tick:")
             displayLink!.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
         }
